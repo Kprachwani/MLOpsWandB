@@ -8,7 +8,7 @@ run_id = sys.argv[1]
 
 api = wandb.Api()
 
-ENTITY = "kanchan"
+ENTITY = "prachwanikanchan1-thomson-reuters"
 PROJECT = "mlops-course-project"
 
 # Fetch baseline run
