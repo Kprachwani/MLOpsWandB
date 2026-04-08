@@ -53,3 +53,4 @@ print("REPORT_URL=" + report_url)
 # Export for GitHub Action Workflow
 with open(os.environ["GITHUB_ENV"], "a") as f:
     f.write(f"REPORT_URL={report_url}\n")
+    
