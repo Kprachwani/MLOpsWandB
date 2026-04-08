@@ -22,4 +22,4 @@ jobs:
       - name: Run script (create W&B run)
         env:
           WANDB_API_KEY: ${{ secrets.WANDB_API_KEY }}
-        run: python init_run.py
+        run: python scripts/init_run.py
