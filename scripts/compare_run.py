@@ -26,8 +26,8 @@ if not baseline_run:
 target_run = api.run(f"{ENTITY}/{PROJECT}/{run_id}")
 
 # Simple comparison
-baseline_metrics = baseline_run.summary
-target_metrics = target_run.summary
+baseline_metrics = dict(baseline_run.summary)
+target_metrics = dict(target_run.summary)
 
 report = f"""
 ## W&B Run Comparison
@@ -38,7 +38,7 @@ report = f"""
 ### Metrics Comparison:
 """
 
-for key in baseline_metrics:
+for key in baseline_metrics.keys():
     if key in target_metrics:
         report += f"- {key}: baseline={baseline_metrics[key]}, target={target_metrics[key]}\n"
 
